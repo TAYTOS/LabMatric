@@ -1,0 +1,119 @@
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+@font-face {
+  font-family: 'Inter Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('@fontsource-variable/inter/files/inter-latin-wght-normal.woff2') format('woff2');
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+:root {
+  --color-primary: 15 118 110;
+  --color-primary-dark: 17 94 89;
+  --color-primary-light: 204 251 241;
+  --color-accent: 67 56 202;
+  --color-ink: 16 42 67;
+  --color-muted: 72 91 112;
+  --color-neutral: 244 247 251;
+  --color-border: 210 222 235;
+  --color-surface: 255 255 255;
+}
+html.dark {
+  color-scheme: dark;
+  --color-primary: 45 212 191;
+  --color-primary-dark: 20 184 166;
+  --color-primary-light: 19 78 74;
+  --color-accent: 165 180 252;
+  --color-ink: 230 241 245;
+  --color-muted: 163 184 199;
+  --color-neutral: 8 21 33;
+  --color-border: 39 66 86;
+  --color-surface: 16 37 54;
+}
+body {
+  font-family: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  color: rgb(var(--color-ink));
+  background-color: rgb(var(--color-neutral));
+  -webkit-tap-highlight-color: transparent;
+}
+html.dark .bg-white {
+  background-color: rgb(var(--color-surface)) !important;
+}
+html.dark .ring-white {
+  --tw-ring-color: rgb(var(--color-surface)) !important;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #E5E7EB transparent;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #E5E7EB;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+:focus-visible {
+  outline: 2px solid rgb(var(--color-primary));
+  outline-offset: 2px;
+}
+button, input, select, summary {
+  min-height: 44px;
+}
+button[aria-label] {
+  min-width: 44px;
+}
+input[type="checkbox"] {
+  min-height: auto;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+main, article {
+  overflow-wrap: anywhere;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+@media (max-width: 1023px) {
+  .responsive-table, .responsive-table tbody, .responsive-table tr, .responsive-table td {
+    display: block;
+    min-width: 0;
+    width: 100%;
+  }
+  .responsive-table thead { display: none; }
+  .responsive-table td { padding: 8px 16px; }
+  .responsive-table td::before {
+    content: attr(data-label);
+    display: block;
+    color: rgb(var(--color-muted));
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .responsive-table tr { padding: 12px 0; }
+}
