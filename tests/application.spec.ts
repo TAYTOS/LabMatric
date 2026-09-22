@@ -288,7 +288,7 @@ test('profile validation, persistence, help and truthful recovery information', 
   await page.getByLabel('Nombres').fill('José');
   await page.getByRole('button', { name: 'Guardar cambios' }).click();
   await page.reload();
-  await expect(page.getByRole('heading', { name: 'José Cusilayme García' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'José Betanzos' })).toBeVisible();
   await page.getByRole('button', { name: 'Ayuda', exact: true }).click();
   await expect(page.getByRole('dialog')).toContainText('¿Cómo me matriculo');
   await page.keyboard.press('Escape');
@@ -360,6 +360,6 @@ test('admin course/group controls, capacity validation and correct student detai
     }
   }
   await page.getByRole('row').filter({ hasText: 'MAT-2026-0912' }).getByRole('button', { name: 'Ver', exact: true }).click();
-  await expect(page.locator('main')).toContainText('José Luis Cusilayme García');
+  await expect(page.locator('main')).toContainText('Taylor Betanzos');
   await expect(page.locator('main')).not.toContainText('Mariana Delgado');
 });

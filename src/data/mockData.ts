@@ -5,9 +5,9 @@ export const ACADEMIC_PERIOD = '2026-B';
 export const mockUsers: User[] = [
 {
   id: 'u1',
-  names: 'José Luis',
-  surnames: 'Cusilayme García',
-  fullName: 'José Luis Cusilayme García',
+  names: 'Taylor',
+  surnames: 'Betanzos',
+  fullName: 'Taylor Betanzos',
   studentCode: '20201234',
   email: 'estudiante@unsa.edu.pe',
   password: 'Unsa2026*',
@@ -15,7 +15,7 @@ export const mockUsers: User[] = [
   semester: 'IX semestre',
   period: ACADEMIC_PERIOD,
   role: 'student',
-  avatarInitials: 'JC'
+  avatarInitials: 'TB'
 },
 {
   id: 'u2',
